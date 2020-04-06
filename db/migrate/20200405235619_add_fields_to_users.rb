@@ -7,7 +7,7 @@ class AddFieldsToUsers < ActiveRecord::Migration[5.2]
   # Initialize first account:
   # User.create! do |u|
   #   u.name = 'tester'
-  #   u.type = 'recipient'
+  #   u.user_type = 'recipient'
   #   u.email     = 'test@test.com'
   #   u.password  = 'password'
   # end
