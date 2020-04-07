@@ -5,19 +5,32 @@ class RequestsController < ApplicationController
 
   # Display all requests
   def index
-    # if current_user.user_type == 'provider'
+    if current_user.type == 'Provider'
       @requests = Request.all
-    # end
+    else
+      @requests = Request.where(user_id: current_user)
+      render 'recipient_requests'
+    end
   end
 
   # Display a single request by finding it by the passed id
   def show
-
+    if current_user.type == 'Recipient'
+      if @request.user != current_user
+        error_msg
+        redirect_to requests_path
+      end
+    end
   end
 
   # Create a new request
   def new
+    if current_user.type == 'Recipient'
     @request = Request.new
+    else
+      error_msg
+      redirect_to requests_path
+    end
   end
 
   # Save the request & redirect the user to all requests
@@ -59,5 +72,9 @@ class RequestsController < ApplicationController
     # Find a request by the passed id
     def find_request 
       @request = Request.find(params[:id])
+    end
+
+    def error_msg
+      flash[:error] = 'Your account type does not support this action!'
     end
 end

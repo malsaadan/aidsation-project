@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'devise'
-gem 'toastr-rails'
+gem 'toastr_rails'
 
 # Use Bootstrap4
 gem 'bootstrap', '~> 4.3.1'

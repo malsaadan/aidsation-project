@@ -1,0 +1,7 @@
+<h1>My sponsorships</h1>
+<% @sponsorships.each do |sponsorship| %>
+    <h5>Title: <%= link_to sponsorship.request.title, request_path(sponsorship.request) %></h5>
+    <p>Description: <%= sponsorship.request.description %></p>
+    <p>Type of request: <%= sponsorship.request.req_type %></p>
+    <a data-confirm="Are you sure you want to to cancel the sponsorship of this request?" data-method="delete" href="/sponsorships/<%=sponsorship.id%>"> Cancel </a>
+<% end %>

@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(name: 'tester', type: 'Recipient', email: 'test@test.com', password: 'password')
+User.create(name: 'recipient', type: 'Recipient', email: 'recipient@test.com', password: 'password')
 
-# Request.create(title: 'test', type: 'support', description: 'Testing requests')
+User.create(name: 'provider', type: 'Provider', email: 'provider@test.com', password: 'password')
+
+Request.create(title: 'test', req_type: 'support', description: 'Testing requests', user_id: 1)

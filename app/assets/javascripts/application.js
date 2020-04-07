@@ -14,7 +14,28 @@
 //= require activestorage
 //= require turbolinks
 
-//= require jquery
-//= require jquery_ujs
-//= require toastr
+//= require jquery3
+//= require popper
+//= require bootstrap
+
+//= require toastr_rails
+
 //= require_tree .
+
+// javascript
+toastr.options = {
+    "closeButton": true,
+    "debug": false,
+    "newestOnTop": true,
+    "progressBar": true,
+    "positionClass": "toast-top-right",
+    "preventDuplicates": true,
+    "showDuration": "300",
+    "hideDuration": "1000",
+    "timeOut": "5000",
+    "extendedTimeOut": "1000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+  };
