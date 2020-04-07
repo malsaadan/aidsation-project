@@ -22,8 +22,15 @@ class RequestsController < ApplicationController
 
   # Save the request & redirect the user to all requests
   def create 
-    Request.create(request_params)
-    redirect_to requests_path
+    @request = Request.new(request_params)
+    @request.user_id = current_user.id
+
+    if @request.save
+      redirect_to @request
+    else
+      render 'new'
+    end
+
   end
 
   # Edit the posted request by finding it by the passed id
