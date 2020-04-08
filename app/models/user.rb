@@ -4,6 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  validates_inclusion_of  :type,   
+         :in => %w( Recipient, Provider )
+
   def recipient?
     type == 'Recipient'
   end

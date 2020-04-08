@@ -23,32 +23,20 @@
     top: 50px;
   }
 
+nav {
+  font-size: 20px;
+}
+
 .logo {
-  width: 20%;
-  height: auto;
-  object-fit: cover;
+  max-width: 80px;
+  max-height: auto;
+}
+
+.navbar-brand{
+  max-width: 80px;
+  max-height: 80px;
 }
 
 a.nav-link {
   display: inline;
-  cursor: pointer;
-}
-
-h2 {
-  text-align: center;
-}
-
-form {
-  .form-row {
-    margin: auto 1%;
-    text-align: center;
-  }
-  
-  .form-control {
-    width: 60%;
-    margin: auto;
-  }
-  
-   margin-top: 2%;
-
 }

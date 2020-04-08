@@ -1,18 +1,17 @@
-<h2>Sign up</h2>
-
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<h3>Sign up</h3>
+
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class ="form-row">
       <div class="form-group col-md-6">
         <%= f.label :name %>
-        <%= f.text_field :name, autofocus: true, autocomplete: "name" , :class => "form-control"%>
+        <%= f.text_field :name, autofocus: true, autocomplete: "name" , :class => "form-control", type: "text"%>
       </div>
 
       <div class="form-group col-md-6">
         <%= f.label :email %>
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" , placeholder: "name@example.com", :class => "form-control"%>
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" , placeholder: "name@example.com", class: "form-control", id: "exampleInputEmail1"%>
       </div>
   </div>
 
@@ -34,15 +33,16 @@
   <div class="form-row">
      <div class="form-group col-md-6">
       <%= f.label :type%>
-      <%= f.select(:type, ["Recipient", "Provider"], {}, {:class => "form-control"} )%>
+      <%= f.select(:type, [["- Select -", :disabled => true] ,"Recipient", "Provider"], {:selected => "- Select -"}, {:class => "form-control"} )%>
     </div>
   </div>
   
   <div class=form-row>
-    <div class="form-group col-md-6" >
       <%= f.submit "Sign up" , :class => "btn btn-primary"%>
-    </div>
   </div>
-<% end %>
 
-<span>Already have an account? <%= render "devise/shared/links" %></span>
+  <div class="form-row">
+  <small>Already have an account? <%= render "devise/shared/links" %></small>
+  </div>
+
+<% end %>
