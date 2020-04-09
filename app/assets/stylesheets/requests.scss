@@ -1,3 +1,89 @@
 // Place all the styles related to the requests controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#requests {
+  
+    background-color: #ffffff;
+    color: #000000;
+
+    text-align: center;
+
+    h1 {
+        margin-bottom: 2%;
+    }
+
+    #accept {
+        margin-top: 1%;
+        text-align: center;
+        .btn {
+            background-color: #A7C081;
+            color: #ffffff;
+            border: none;
+        }
+    }
+
+    #read {
+        font-size: 14px;
+        text-align: justify;
+        margin-top: 0.5px;
+
+        a {
+            color: #737373;
+        }
+    }
+
+    .card-header{
+        overflow: hidden;
+    }
+
+    .card-text {
+        overflow: hidden;
+        text-align: justify;
+    }
+}
+
+#show {
+    font-size: large;
+    text-align: center;
+}
+
+
+#edit {
+    margin-right: 8%;
+}
+
+
+.container {
+    h3{
+    margin: 2% 13% 2%;
+    text-align: justify;
+    }
+  }
+
+form {
+  
+    margin: 5% 18% 1%;
+    .form-row {
+      margin-bottom: 2px;
+      text-align: left;
+    }
+    
+    .form-control {
+      width: 100%;
+    }
+    
+     margin-top: 2%;
+
+     small {
+        margin: auto;
+        margin-top: 1%;
+
+      }
+
+      #btns{
+        text-align: center;
+        margin: 1% 35%;
+       }
+  }

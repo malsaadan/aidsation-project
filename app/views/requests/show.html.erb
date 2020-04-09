@@ -1,7 +1,8 @@
-<h1><%= @request.title %></h2>
-
-<p> Description: <%= @request.description %></p>
-
-<p>Type of request: <%= @request.req_type %>
-
-<p>Requested by: <%= @request.user.name %></p>
+<div class="container" id="show">
+    <h2 class="display"><%= @request.title.capitalize %></h1>
+    <p><strong>Description: </strong><%= @request.description.capitalize %></p>
+    <p><small><strong>Type of request:</strong> <%= @request.req_type.capitalize%></small></p>
+    <p><small><strong>By:</strong> <%= @request.user.name.capitalize%></small></p>
+    <small><strong>Created at:</strong> <%= @request.created_at%></small><br/><br/>
+    <p><%= link_to "Return to all requests", requests_path, class: "btn btn-secondary"%></p>
+</div>

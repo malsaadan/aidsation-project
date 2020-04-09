@@ -1,48 +1,64 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, id:"edit" }) do |f| %>
+<h4>Edit <%= resource_name.to_s.humanize %></h4>
+
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
-  </div>
-  
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class ="form-row">
+      <div class="form-group col-md-6">
+        <%= f.label :name %>
+        <%= f.text_field :name, autofocus: true, autocomplete: "name" , :class => "form-control form-control-sm", type: "text"%>
+      </div>
+
+      <div class="form-group col-md-6">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" , placeholder: "name@example.com", class: "form-control form-control-sm"%>
+      </div>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
+  <div class="form-row">
+      <div class="form-group col-md-6">
+        <%= f.label :password %>    
+        <% if @minimum_password_length %>
+          <em><%= @minimum_password_length %> characters minimum</em>
+        <% end %>
+        <%= f.password_field :password, autocomplete: "new-password" , class:"form-control form-control-sm", placeholder: "Leave blank if you don't want to change it."%>
+      </div>
+
+    <div class="form-group col-md-6">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password" , class:"form-control form-control-sm"%>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  <div class="form-row">
+      <div class="form-group col-md-6">
+        <%= f.label :current_password %> <small><i>(Enter current password to confirm the changes)</i></small>
+        <%= f.password_field :current_password, autocomplete: "current-password", class:"form-control form-control-sm"%>
+      </div>
+
+      <div class="form-group col-md-6">
+        <%= f.label :type%>
+        <input type="text" readonly class="form-control form-control-sm" value=<%=resource.name.capitalize%>>
+      </div>
   </div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
+<h5>Cancel Account</h5>
 
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
+<div class="form-row">
+  <div class="form-group col-md-6">Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger btn-sm" %></div>
+</div>
+
+<div class="form-row" id="btns">
+    <div class="form-group col-md-6">
+      <%= link_to "Cancel", :back, class: "btn btn-outline-primary", :id => "cancel"%>
+    </div>
+    <div class="form-group col-md-6">
+      <%= f.submit "Update", :class => "btn btn-primary", :id => "update" %>
+    </div>
+</div>
 <% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>

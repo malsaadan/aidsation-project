@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'toastr_rails'
 
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
+
 # Use Bootstrap4
 gem 'bootstrap', '~> 4.3.1'
 # Use jQuery

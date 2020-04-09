@@ -1,11 +1,30 @@
-<h1>My Requests</h1>
-<% @requests.each do |request| %>
-    <h5>Title: <%= link_to request.title, request_path(request) %></h5>
-    <p>Description: <%= request.description %></p>
-    <p>Type of request: <%= request.req_type %></p>
-    <a href="<%= edit_request_path(request) %>" >
-           <em class="">Edit Request</em>
-          </a>
-          <a data-confirm="Are you sure you want to delete <%= request.title %>?" data-method="delete" href="/requests/<%= request.id %>" rel="nofollow"><i class="large material-icons">Delete Request</i>
-         </a>
-<% end %>
+<div class="container" id="requests">
+    <div class="row">
+        <div class="col-md-10">
+            <h1 class="display">My Requests</h1>
+        </div>
+        <div class="col-md-2">
+            <a class="btn btn-primary" href="<%= new_request_path %>"><i class="fa fa-plus"> New Request</i></a>
+        </div>
+    </div>
+
+    <div class="row">
+    <% @requests.each do |request| %>
+    <div class="col-md-3">
+        <div class="card-deck">
+            <div class="card mb-3" style="max-width: 16rem;">
+                <div class="card-header bg-transparent"><h5>Status: <%= request.status%></h5></div>
+                <div class="card-body">
+                    <h5 class="card-title"><%= request.title.capitalize%></h5>
+                    <p class="card-text"><%= request.description.capitalize %><br/>
+                    <small id="read"><%= link_to "Read details...", request_path(request) %></small> </p>
+                    <a href="<%= edit_request_path(request) %>" >
+                        <i class="fa fa-edit" id="edit"> Edit</i></a>
+                    <a data-confirm="Are you sure you want to delete <%= request.title %>?" data-method="delete" href="/requests/<%= request.id %>" rel="nofollow"><i class="fa fa-trash" id="delete"> Delete</i></a>                
+                    </div>
+            </div>
+        </div>
+    </div>
+    <% end %>
+    </div>
+</div>

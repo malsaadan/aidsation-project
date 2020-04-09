@@ -9,14 +9,14 @@ form {
       margin-bottom: 3%;
     }
   
-    margin: 5% 15% 1%;
+    margin: 5% 16% 1%;
     .form-row {
       margin-bottom: 2px;
-      text-align: justify;
+      text-align: left;
     }
     
     .form-control {
-      width: 90%;
+      width: 100%;
     }
     
      margin-top: 2%;
@@ -27,10 +27,53 @@ form {
       margin: auto;
       margin-top: 1%;
      }
-
+     
      small {
         margin: auto;
         margin-top: 1%;
+      }
 
+      a {
+          color: #737373;
       }
   }
+
+  #signup {
+    background-color: #A7C081;
+    color: #ffffff;
+    border: none;
+  }
+
+  #login {
+      margin: 5% 30% 1%;
+      #check-remember {
+        margin-left: 4%;  
+      }
+  }
+
+  #signin {
+    background-color: #A7C081;
+    color: #ffffff;
+    border: none;
+  }
+
+  #edit {
+    margin: 2% 14% 0;
+    font-size: 16px;
+    
+  }
+
+  #btns {
+    margin: 0% 42% 1%;
+
+    #update {
+        background-color: #A7C081;
+        color: #ffffff;
+        border: none;
+    }
+
+    #cancel {
+        color: #A7C081;
+        border-color: #A7C081;
+    }
+}

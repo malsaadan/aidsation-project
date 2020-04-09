@@ -1,2 +1,18 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+    <div class="container" id="home">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <h1 class="display">Looking for support or want to trade?</h1>
+                </div>
+                <div class="row">
+                    <h3 class="display">This is the right place for you!</h3><br/>
+                </div>
+                <div class="row">
+                    <%= link_to  "Start now", requests_path , class:"btn btn-primary btn-lg", id: "start"%>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <%= image_tag  "Picture1.png" %>
+            </div>
+        </div>
+    </div>

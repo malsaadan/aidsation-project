@@ -1,3 +1,40 @@
 // Place all the styles related to the Sponsorships controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#sponsorships {
+    text-align: center;
+
+    background-color: #ffffff;
+    color: #000000;
+
+
+    h1 {
+        margin-bottom: 4%;
+    }
+
+    #accept {
+        margin-top: 1%;
+        text-align: center;
+    }
+
+    #read {
+        font-size: 14px;
+        text-align: justify;
+        margin-top: 0.5px;
+
+        a {
+            color: #737373;
+        }
+    }
+
+    .card-header{
+        overflow: hidden;
+    }
+
+    .card-text {
+        overflow: hidden;
+        text-align: justify;
+    }
+
+}

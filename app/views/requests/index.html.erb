@@ -1,9 +1,23 @@
-<h1>All Requests</h1>
-<% @requests.each do |request| %>
-    <% if request.status == "pending"%>
-    <h5>Title: <%= link_to request.title, request_path(request) %></h5>
-    <p>Description: <%= request.description %></p>
-    <p>Type of request: <%= request.req_type %></p>
-    <%= link_to "Accept", new_sponsorship_path(:request_id => request.id, :user_id => current_user.id) %>
+<div class="container" id="requests">
+    <h1 class="display">All Requests</h1>
+
+    <div class="row">
+    <% @requests.each do |request| %>
+        <% if request.status == "pending"%>
+        <div class="col-md-3">
+        <div class="card-deck">
+            <div class="card mb-3" style="max-width: 16rem;">
+                <div class="card-header bg-transparent"><h5>Type: <%= request.req_type.capitalize %></h5></div>
+                <div class="card-body">
+                    <h5 class="card-title"><%= request.title.capitalize%></h5>
+                    <p class="card-text"><%= request.description.capitalize %><br/>
+                    <small id="read"><%= link_to "Read details...", request_path(request) %></small> </p>
+                    <p id="accept"><%= link_to "Accept", new_sponsorship_path(:request_id => request.id, :user_id => current_user.id), class: "btn btn-primary" %></p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <% end %>
     <% end %>
-<% end %>
+    </div>
+</div>
