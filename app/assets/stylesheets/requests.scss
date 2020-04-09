@@ -40,7 +40,7 @@
 
     .card-text {
         overflow: hidden;
-        text-align: justify;
+        text-align: left;
     }
 }
 
@@ -95,6 +95,13 @@ form {
 
 
   #new-request {
+    background-color: #A7C081;
+    color: #ffffff;
+    border: none;
+  }
+
+
+  #request-submit {
     background-color: #A7C081;
     color: #ffffff;
     border: none;
