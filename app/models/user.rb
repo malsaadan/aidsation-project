@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates_inclusion_of  :type,   
-         :in => %w( Recipient, Provider )
+         :in => %w( Recipient Provider )
 
   def recipient?
     type == 'Recipient'

@@ -52,6 +52,11 @@
 
 #edit {
     margin-right: 8%;
+    color: #A7C081;
+}
+
+#delete {
+    color: #D93654;
 }
 
 
@@ -86,4 +91,11 @@ form {
         text-align: center;
         margin: 1% 35%;
        }
+  }
+
+
+  #new-request {
+    background-color: #A7C081;
+    color: #ffffff;
+    border: none;
   }

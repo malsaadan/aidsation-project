@@ -33,7 +33,7 @@
   <div class="form-row">
      <div class="form-group col-md-6">
       <%= f.label :type%>
-      <%= f.select(:type, [["- Select -", :disabled => true] ,"Recipient", "Provider"], {:selected => "- Select -"}, {:class => "form-control"} )%>
+      <%= f.select(:type, options_for_select(["Recipient", "Provider"]),{:prompt=>"Select"}, {:class => "form-control"})%>
     </div>
   </div>
   

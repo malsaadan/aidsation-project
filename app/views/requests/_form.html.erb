@@ -6,7 +6,7 @@
         </div>
         <div class="col-md-4">
             <%= f.label "Request Type" %>
-            <%= f.select(:req_type, [["- Select -", :disabled => true],"support", "trade"],{:selected => "- Select -"}, {:class => "form-control"}) %>
+            <%= f.select(:req_type, options_for_select(["support", "trade"]), {:prompt => "Select"}, {:class => "form-control"}) %>
         </div>
     </div>
         <div class="form-group">
