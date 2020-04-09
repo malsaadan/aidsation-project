@@ -57,23 +57,23 @@ V2:
 
 * Sign up
 
-![wireframes#1](wireframes/sign-up.png)
+![wireframes#1](wireframes/Sign-up.png)
 
 * Sign in
 
-![wireframes#2](wireframes/sign-in.png)
+![wireframes#2](wireframes/Sign-in.png)
 
 * Landing Page
 ![wireframes#3](wireframes/Landing-page.png)
 
 * Request Form
-![wireframes#4](wireframes/post-request.png)
+![wireframes#4](wireframes/Post-request.png)
 
 * Display Requests
 ![wireframes#5](wireframes/All-requests.png)
 
 * Profile
-![wireframes#6](wireframes/profile.png)
+![wireframes#6](wireframes/Profile.png)
 
 ## ERD
 ![ERD](wireframes/erd.png)
